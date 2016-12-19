@@ -1,0 +1,11 @@
+{% macro nav(section) %}
+<nav aria-label="Main Navigation">
+  <ul class="main-navigation">
+    <li class="{%if section == 'home' %}active{% endif %}"><a href="#">Section 0</a></li>
+    <li class="{%if section == 'section1' %}active{% endif %}"><a href="#">Section 1</a></li>
+    <li class="{%if section == 'section2' %}active{% endif %}"><a href="#">Section 2</a></li>
+    <li class="{%if section == 'section3' %}active{% endif %}"><a href="#">Section 3</a></li>
+  </ul>
+</nav>
+{{ caller() }}
+{% endmacro %}

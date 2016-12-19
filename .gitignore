@@ -1,0 +1,30 @@
+# Ignore NPM and Bower folders.
+bower_components
+node_modules
+npm-debug.log
+
+# Ignore prod/dist folders
+dist
+
+# Ignore generated CSS.
+.sass-cache
+app/styles/**/*.css
+app/elements/**/*.css
+
+# Built Experiment
+app/experiment
+
+*~
+*.pyc
+*.swp
+*.DS_Store
+.sass-cache
+node_modules
+bower_components
+.tmp
+screenshots
+sitemap.xml
+
+# Intellij
+*.iml
+.idea

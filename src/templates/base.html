@@ -1,0 +1,37 @@
+{% from "macros/head.macro.html" import head %}
+<!DOCTYPE HTML>
+<html class="no-js" lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}^__^{% endblock %}</title>
+  {% block social %}
+    {% include "partials/social-meta.partial.html" %}
+  {% endblock %}
+  <meta name="description" content="">
+  <link rel="canonical" href="">
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  {% block head_stylesheet %}
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arvo">
+    <link rel="stylesheet" href="css/style.css">
+  {% endblock %}
+  {% block head_script_src %}
+    <script src="static/js/modernizr-3.3.1.min.js"></script>
+  {% endblock %}
+  {% block head_script %}{% endblock %}
+  {% block head_style %}{% endblock %}
+</head>
+<body>
+  <div id="page" class="page-site">
+    {% block header %} {% endblock %}
+    {% block main %}{% endblock %}
+    {% block footer %}{% endblock %}
+  </div>
+  {% block footer_script_src %}
+  <script src="js/common.js"></script>
+  <script src="js/bundle.js"></script>
+  {% endblock %}
+  {% block footer_script %}{% endblock %}
+</body>
+
+</html>

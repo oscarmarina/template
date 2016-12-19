@@ -1,0 +1,49 @@
+{
+  "name": "gulp-base",
+  "version": "0.0.1",
+  "private": true,
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "devDependencies": {
+    "babel-loader": "*",
+    "babel-plugin-transform-runtime": "*",
+    "babel-polyfill": "*",
+    "babel-preset-es2015": "*",
+    "babel-preset-react": "*",
+    "babel-runtime": "*",
+    "babel-core" : "*",
+    "browser-sync": "*",
+    "cssnano": "*",
+    "del": "*",
+    "glob": "*",
+    "gulp": "*",
+    "gulp-concat": "*",
+    "gulp-data": "*",
+    "gulp-htmlmin": "*",
+    "gulp-if": "*",
+    "gulp-imagemin": "*",
+    "gulp-nunjucks-render": "*",
+    "gulp-param": "*",
+    "gulp-postcss": "*",
+    "gulp-rename": "*",
+    "gulp-sass": "*",
+    "gulp-sourcemaps": "*",
+    "gulp-uglify": "*",
+    "gulp-util": "*",
+    "imports-loader": "",
+    "json-loader": "*",
+    "postcss-cssnext": "*",
+    "run-sequence": "*",
+    "webpack": "*",
+    "webpack-dev-server": "*",
+    "webpack-stream": "*"
+  },
+  "dependencies": {
+    "jquery": "*",
+    "react": "*",
+    "react-dom": "*",
+    "snapsvg": "*",
+    "rx": "*"
+  }
+}
