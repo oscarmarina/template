@@ -12,7 +12,7 @@ module.exports = {
   devtool: 'eval',
   entry: [
 
-    //'babel-polyfill',
+    'babel-polyfill',
     path.resolve(dirJs, 'main.js')
   ],
 
