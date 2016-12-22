@@ -33,18 +33,6 @@ var WebpackDevServer = require('webpack-dev-server');
 var webpackConfig = require('./webpack.config.js');
 var stream = require('webpack-stream');
 
-var POSTCSS_BROWSERS = [
-  'ie >= 10',
-  'ie_mob >= 10',
-  'ff >= 30',
-  'chrome >= 34',
-  'safari >= 7',
-  'opera >= 23',
-  'ios >= 7',
-  'android >= 4.4',
-  'bb >= 10'
-];
-
 GLOBAL.config = {
   env: 'prod',
   src: 'src',
@@ -59,6 +47,7 @@ gulp.task('clean', function() {
   return del([ GLOBAL.config.dest ]);
 });
 
+/** Webpack only use for Babel*/
 gulp.task('webpack', [], function() {
   return gulp.src([GLOBAL.config.src + '/js/**/*.jsx', GLOBAL.config.src + '/js/**/*.js']) // gulp looks for all source files under specified path
     .pipe(gulpif(GLOBAL.config.env !== 'prod', sourcemaps.init()))
@@ -89,7 +78,7 @@ gulp.task('html', function() {
 /** Styles */
 gulp.task('styles', function() {
   var processors = [ cssnext({
-    browsers: POSTCSS_BROWSERS,
+    browsers: ['defaults', 'not IE 10'],
     features: {
       customProperties: false
     }
@@ -118,6 +107,7 @@ gulp.task('images', function() {
     .pipe(browserSync.stream());
 });
 
+/** Static, third_party, manifest.json */
 gulp.task('static', function() {
   return gulp.src(GLOBAL.config.src + '/static/**/*.*')
     .pipe(gulp.dest(GLOBAL.config.dest + '/static'))
